@@ -36,7 +36,7 @@ function Tasks() {
             </thead>
             <tbody>
                 {notes.map((note, key)=>{
-                    return (
+                    return (                        
                         <tr key={key}>
                             <td>{note.id}</td>
                             <td>{note.task}</td>
