@@ -13,6 +13,14 @@ function Tasks() {
             setNotes(res.data)
         }).catch(e=>console.log(e));
     },[]);
+
+    const handleDelete=(id)=>{
+        axios.delete('https://localhost:7225/api/ToDoApp/deleteNote?id='+id)
+        .then(res=>{
+            console.log(res);
+            window.location.reload();
+        }).catch(e=>console.log(e));
+    }
   return (
     <div className='task_cont'>
         <div className='task_cont2'>
@@ -29,20 +37,20 @@ function Tasks() {
             <tbody>
                 {notes.map((note, key)=>{
                     return (
-                        <tr>
+                        <tr key={key}>
                             <td>{note.id}</td>
                             <td>{note.task}</td>
                             <td>{note.expDate}</td>
                             <td><textarea>{note.notes}</textarea></td>
                             <td>
                             <div className='d-flex'>
-                            <span class="material-symbols-outlined">
-                            <button className='btn btn-danger'>Delete</button>
+                            <span className="material-symbols-outlined">
+                            <button onClick={(e)=>handleDelete(note.id)} className='btn btn-danger'>Delete</button>
                             </span>
-                            <span class="material-symbols-outlined">
-                            <button className='btn btn-warning'>Edit</button>
+                            <span className="material-symbols-outlined">
+                            <Link to={`/UpdateTask/${note.id}`} className='btn btn-warning'>Edit</Link>
                             </span>
-                            <span class="material-symbols-outlined">
+                            <span className="material-symbols-outlined">
                             <button className='btn btn-dark'>Check</button>
                             </span>
                             </div>
