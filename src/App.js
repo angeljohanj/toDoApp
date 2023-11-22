@@ -15,9 +15,9 @@ function App() {
         <Routes>
           <Route path='/' element={<Login/>}></Route>
           <Route path='/UserAdd' element={<UserAdd/>}></Route>
-          {/* <Route path='/' element={<Tasks/>}></Route>
+          <Route path='/Tasks' element={<Tasks/>}></Route>
           <Route path='/CreateTask' element={<CreateTask/>}></Route>
-          <Route path='/UpdateTask/:id' element={<UpdateTask/>}></Route> */}
+          <Route path='/UpdateTask/:id' element={<UpdateTask/>}></Route>
         </Routes>
       </BrowserRouter>
     </div>

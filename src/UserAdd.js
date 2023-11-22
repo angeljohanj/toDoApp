@@ -42,17 +42,17 @@ function UserAdd() {
         <h1>New user</h1>
         <form className='form' id='form'>
       <div className="form-group">
-    <label htmlForfor="exampleInputEmail1">Username</label>
+    <label htmlFor="exampleInputEmail1">Username</label>
     <input type="text"  className="form-control" id="username" placeholder="ex. Paul"
     onChange={(e)=>{setUser(e.target.value)}}></input>
   </div>
   <div className="form-group">
-    <label htmlForfor="exampleInputPassword1">Password</label>
+    <label htmlFor="exampleInputPassword1">Password</label>
     <input type="password" className="form-control"  id="pass"
     onChange={(e)=>{setPass(e.target.value)}}></input>
   </div>
   <div className="form-group">
-    <label htmlForfor="exampleInputPassword1">Repeat password</label>
+    <label htmlFor="exampleInputPassword1">Repeat password</label>
     <input type="password" className="form-control" id="passRep"
     placeholder="password must be the same"
     ></input>

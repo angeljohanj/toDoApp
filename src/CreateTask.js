@@ -36,7 +36,7 @@ function CreateTask() {
     <textarea type="text" className="form-control" id="exampleInputEmail1" placeholder="Type task notes here"
     onChange={e=>setNotes(e.target.value)} defaultValue={''}></textarea>
   </div>
-  <Link to={'/'} className='btn btn-danger'>Go to tasks</Link>
+  <Link to={'/Tasks'} className='btn btn-danger'>Go to tasks</Link>
   <button type="submit" className="btn btn-primary">Create</button>
 </form>
     
