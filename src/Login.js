@@ -23,6 +23,7 @@ const handleLogin=()=>{
             id:0, username: user, password:pass
         }).then(res=>{
             console.log(res);
+            
             alert('Logged in successfully!');
             nav('/Tasks');
         })

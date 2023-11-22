@@ -2,3 +2,22 @@
     
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
+
+.App h1{
+    display: flex;
+    justify-content: center;
+}
+
+.task_cont{
+    background-color: cadetblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.task_cont2{
+    background: white;
+    margin: 100px;
+    padding: 30px;
+    border-radius: 45px;
+}

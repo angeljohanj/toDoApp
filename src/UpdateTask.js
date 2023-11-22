@@ -27,11 +27,13 @@ function UpdateTask() {
             id:id,task:task, expDate:expDate, notes:notes
         }).then(res=>{
             console.log(res);
-            nav('/');
+            nav('/Tasks');
         }).catch(e=>console.log(e));
     }
   return (
-    <div>
+    <div className='task_cont'>
+        <div className='task_cont2'>
+          <h1>Edit task</h1>
     <form onSubmit={HandleSubmit}>
   <div className="form-group">
     <label htmlFor="exampleInputEmail1">Task</label>
@@ -48,9 +50,11 @@ function UpdateTask() {
     <textarea type="text" value={notes} className="form-control" id="exampleInputEmail1" placeholder="Type task notes here"
     onChange={e=>setNotes(e.target.value)} defaultValue={''}></textarea>
   </div>
+  
+  <button type="submit" className="btn btn-primary">Update</button><br></br>
   <Link to={'/Tasks'} className='btn btn-danger'>Go to tasks</Link>
-  <button type="submit" className="btn btn-primary">Update</button>
 </form>
+    </div>
     </div>
   )
 }
